@@ -1,7 +1,10 @@
-const CACHE_NAME = 'zhaoshang-v1';
+const CACHE_NAME = 'zhaoshang-v2';
 const urlsToCache = [
   './',
-  './index.html'
+  './招商最终版.html',
+  './manifest.json',
+  './icon-192.png',
+  './icon-512.png'
 ];
 
 self.addEventListener('install', function(event) {
