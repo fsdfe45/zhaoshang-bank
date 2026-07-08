@@ -2618,45 +2618,39 @@ body {
 .pwd-overlay {
   position: absolute;
   top: 0; left: 0;
-  width: 100%; height: 100%;
+  width: 430px; height: 932px;
   background: #f5f5f7;
   z-index: 9999;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
+  user-select: none;
 }
 .pwd-overlay.hidden { display: none; }
-.pwd-card {
-  background: #fff;
-  border-radius: 16px;
-  padding: 56px 28px 48px;
-  width: 364px;
-  box-shadow: 0 2px 20px rgba(0,0,0,0.08);
-  text-align: center;
-}
 .pwd-subtitle {
-  font-size: 18px;
-  font-weight: 500;
-  color: #999;
-  margin-bottom: 36px;
+  font-size: 17px;
+  font-weight: 400;
+  color: #333;
+  margin-top: 140px;
+  margin-bottom: 48px;
 }
 .pwd-dots {
   display: flex;
   justify-content: center;
   gap: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 24px;
 }
 .pwd-dot {
-  width: 18px; height: 18px;
+  width: 14px; height: 14px;
   border-radius: 50%;
-  background: #e0e0e0;
-  transition: background 0.15s;
+  border: 1px solid #c8c8cc;
+  background: transparent;
+  transition: background 0.15s, border-color 0.15s;
 }
-.pwd-dot.filled { background: #333; }
-.pwd-dot.error { background: #d9252c; animation: pwd-shake 0.4s ease; }
+.pwd-dot.filled { background: #333; border-color: #333; }
+.pwd-dot.error { background: #d9252c; border-color: #d9252c; animation: pwd-shake 0.4s ease; }
 @keyframes pwd-shake {
   0%,100% { transform: translateX(0); }
   20% { transform: translateX(-8px); }
@@ -2667,62 +2661,63 @@ body {
 .pwd-error-msg {
   font-size: 13px;
   color: #d9252c;
-  margin-top: -16px;
-  margin-bottom: 16px;
   min-height: 20px;
+  margin-bottom: 8px;
   visibility: hidden;
 }
 .pwd-error-msg.show { visibility: visible; }
 .pwd-keypad {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px 18px;
-  max-width: 320px;
-  margin: 0 auto;
+  grid-template-columns: repeat(3, 80px);
+  gap: 16px 44px;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: 72px;
 }
 .pwd-key {
-  width: 68px; height: 68px;
+  width: 80px; height: 80px;
   border-radius: 50%;
-  border: 1px solid #e0e0e0;
-  background: #fff;
-  font-size: 24px;
-  color: #333;
+  border: none;
+  background: #e5e5ea;
+  font-size: 32px;
+  font-weight: 300;
+  color: #000;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   user-select: none;
   transition: background 0.1s;
-  margin: 0 auto;
 }
-.pwd-key:active { background: #f0f0f0; }
-.pwd-key.empty { border: none; background: transparent; cursor: default; }
+.pwd-key:active { background: #d1d1d6; }
+.pwd-key.empty { background: transparent; cursor: default; }
 .pwd-key.empty:active { background: transparent; }
 .pwd-key.del {
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: 400;
   color: #999;
-  border: none;
   background: transparent;
 }
-.pwd-key.del:active { background: #f0f0f0; border-radius: 50%; }
+.pwd-key.del:active { background: #e5e5ea; }
 .pwd-lockout {
   display: none;
   text-align: center;
-  padding: 20px 0;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 .pwd-lockout.show { display: block; }
 .pwd-lockout .pwd-lock-icon {
   font-size: 36px;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 .pwd-lockout .pwd-lock-text {
-  font-size: 14px;
+  font-size: 15px;
   color: #666;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
 .pwd-lockout .pwd-lock-time {
-  font-size: 28px;
-  font-weight: 600;
+  font-size: 36px;
+  font-weight: 300;
   color: #999;
 }
 
@@ -4134,36 +4129,34 @@ body {
 
 <!-- ===== 密码锁覆盖层 ===== -->
 <div class="pwd-overlay" id="pwdOverlay">
-  <div class="pwd-card">
-    <div class="pwd-subtitle">请输入密码</div>
-    <div class="pwd-dots" id="pwdDots">
-      <div class="pwd-dot"></div>
-      <div class="pwd-dot"></div>
-      <div class="pwd-dot"></div>
-      <div class="pwd-dot"></div>
-      <div class="pwd-dot"></div>
-      <div class="pwd-dot"></div>
-    </div>
-    <div class="pwd-error-msg" id="pwdErrMsg">密码错误</div>
-    <div class="pwd-keypad" id="pwdKeypad">
-      <div class="pwd-key" data-key="1">1</div>
-      <div class="pwd-key" data-key="2">2</div>
-      <div class="pwd-key" data-key="3">3</div>
-      <div class="pwd-key" data-key="4">4</div>
-      <div class="pwd-key" data-key="5">5</div>
-      <div class="pwd-key" data-key="6">6</div>
-      <div class="pwd-key" data-key="7">7</div>
-      <div class="pwd-key" data-key="8">8</div>
-      <div class="pwd-key" data-key="9">9</div>
-      <div class="pwd-key empty"></div>
-      <div class="pwd-key" data-key="0">0</div>
-      <div class="pwd-key del" id="pwdDel">⌫</div>
-    </div>
-    <div class="pwd-lockout" id="pwdLockout">
-      <div class="pwd-lock-icon"><svg width="28" height="36" viewBox="0 0 28 36"><rect x="6" y="0" width="16" height="20" rx="8" fill="none" stroke="#999" stroke-width="2.5"/><rect x="2" y="14" width="24" height="22" rx="4" fill="#999"/><circle cx="14" cy="25" r="3" fill="#fff"/><rect x="13" y="25" width="2" height="5" fill="#fff"/></svg></div>
-      <div class="pwd-lock-text">密码错误次数过多，请稍后再试</div>
-      <div class="pwd-lock-time" id="pwdLockTime">60</div>
-    </div>
+  <div class="pwd-subtitle">请输入密码</div>
+  <div class="pwd-dots" id="pwdDots">
+    <div class="pwd-dot"></div>
+    <div class="pwd-dot"></div>
+    <div class="pwd-dot"></div>
+    <div class="pwd-dot"></div>
+    <div class="pwd-dot"></div>
+    <div class="pwd-dot"></div>
+  </div>
+  <div class="pwd-error-msg" id="pwdErrMsg">密码错误</div>
+  <div class="pwd-keypad" id="pwdKeypad">
+    <div class="pwd-key" data-key="1">1</div>
+    <div class="pwd-key" data-key="2">2</div>
+    <div class="pwd-key" data-key="3">3</div>
+    <div class="pwd-key" data-key="4">4</div>
+    <div class="pwd-key" data-key="5">5</div>
+    <div class="pwd-key" data-key="6">6</div>
+    <div class="pwd-key" data-key="7">7</div>
+    <div class="pwd-key" data-key="8">8</div>
+    <div class="pwd-key" data-key="9">9</div>
+    <div class="pwd-key empty"></div>
+    <div class="pwd-key" data-key="0">0</div>
+    <div class="pwd-key del" id="pwdDel">⌫</div>
+  </div>
+  <div class="pwd-lockout" id="pwdLockout">
+    <div class="pwd-lock-icon"><svg width="32" height="40" viewBox="0 0 28 36"><rect x="6" y="0" width="16" height="20" rx="8" fill="none" stroke="#999" stroke-width="2.5"/><rect x="2" y="14" width="24" height="22" rx="4" fill="#999"/><circle cx="14" cy="25" r="3" fill="#fff"/><rect x="13" y="25" width="2" height="5" fill="#fff"/></svg></div>
+    <div class="pwd-lock-text">密码错误次数过多，请稍后再试</div>
+    <div class="pwd-lock-time" id="pwdLockTime">60</div>
   </div>
 </div>
 
