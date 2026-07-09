@@ -1489,7 +1489,9 @@ body {
 
 .my-balance-card {
   background: #fff; border-radius: 12px; margin: 0 16px 12px; padding: 16px;
+  cursor: pointer; transition: opacity 0.15s;
 }
+.my-balance-card:active { opacity: 0.7; }
 .my-balance-card .mb-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
 .my-balance-card .mb-title { font-size: 15px; font-weight: 400; color: #000; }
 .my-balance-card .mb-subtitle { font-size: 11px; color: #999; margin-bottom: 14px; }
@@ -3610,7 +3612,7 @@ body {
 </div>
 
 <!-- Balance Card (Video 5 - balance = 300,184.34) -->
-<div class="my-balance-card" id="my-balance">
+<div class="my-balance-card" id="my-balance" onclick="openIncomeDetail()">
   <div class="mb-header">
     <span class="mb-title">账户总览</span>
     <span style="cursor:pointer;display:inline-flex;align-items:center;" onclick="toggleBalance('my')"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></span>
@@ -3638,11 +3640,11 @@ body {
     <div class="mi-divider"></div>
     <div class="mi-col">
       <div class="mi-label">收入</div>
-      <div class="mi-value" id="my-income">¥ 9,406.56</div>
+      <div class="mi-value" id="my-income">¥ 2.36</div>
     </div>
   </div>
   <div class="mi-bar"></div>
-  <div class="mi-footer">✦ 5月结余 <span id="my-surplus">¥ 1,390.50</span> <span>查看</span></div>
+  <div class="mi-footer">✦ 本月结余 <span id="my-surplus">¥ 1,390.50</span> <span>查看</span></div>
 </div>
 
 <div class="service-recs">
@@ -4356,12 +4358,21 @@ var incomeData = {
     {date:"6.06",name:"美团App甘煨记干煸辣子鸡",time:"19:15",amt:"-33.90",balance:"356.43",tag:""},
     {date:"6.05",name:"退 嘉导国际旅行社（苏州）有限公司",time:"10:20",amt:"+17.00",balance:"390.33",tag:"退"},
     {date:"6.05",name:"嘉导国际旅行社（苏州）有限公司",time:"10:18",amt:"-17.00",balance:"373.33",tag:""}
+  ]},
+  "7月": { income: "0.00", expense: "88.00", records: [
+    {date:"7.08",name:"牛肉堡（*兵）",time:"12:11",amt:"-12.00",balance:"300,162.92",tag:""},
+    {date:"7.07",name:"牛肉堡（*兵）",time:"11:59",amt:"-12.00",balance:"300,174.92",tag:""},
+    {date:"7.06",name:"后厨小灶",time:"12:01",amt:"-12.00",balance:"300,186.92",tag:""},
+    {date:"7.03",name:"后厨小灶",time:"12:03",amt:"-14.00",balance:"300,198.92",tag:""},
+    {date:"7.02",name:"后厨小灶",time:"11:57",amt:"-14.00",balance:"300,212.92",tag:""},
+    {date:"7.02",name:"后厨小灶",time:"11:54",amt:"-12.00",balance:"300,226.92",tag:""},
+    {date:"7.01",name:"后厨小灶",time:"11:59",amt:"-12.00",balance:"300,238.92",tag:""}
   ]}
 };
 
 // Dynamic balance: read latest balance from 6月 income records
 function getLatestBalance() {
-  var months = ['6月','5月','4月','3月','2月','1月'];
+  var months = ['7月','6月','5月','4月','3月','2月','1月'];
   for (var i = 0; i < months.length; i++) {
     var m = incomeData[months[i]];
     if (m && m.records && m.records.length > 0) {
@@ -4410,7 +4421,7 @@ function getRecordIcon(name, tag) {
   // 快递
   if (n.indexOf('丰巢') >= 0) return {icon:'<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#777" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>', bg:bg};
   // 美食类
-  if (n.indexOf('美团') >= 0 || n.indexOf('饿了么') >= 0 || n.indexOf('团购') >= 0 || n.indexOf('肯德基') >= 0 || n.indexOf('烤肉') >= 0 || n.indexOf('火锅') >= 0 || n.indexOf('川菜') >= 0 || n.indexOf('串串') >= 0 || n.indexOf('锅盔') >= 0 || n.indexOf('鬼酥肉') >= 0 || n.indexOf('利美乐') >= 0 || n.indexOf('西餐') >= 0 || n.indexOf('甘煨记') >= 0 || n.indexOf('辣子鸡') >= 0 || n.indexOf('咖啡') >= 0) return {icon:'<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#777" stroke-width="1.5"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>', bg:bg};
+  if (n.indexOf('美团') >= 0 || n.indexOf('饿了么') >= 0 || n.indexOf('团购') >= 0 || n.indexOf('肯德基') >= 0 || n.indexOf('烤肉') >= 0 || n.indexOf('火锅') >= 0 || n.indexOf('川菜') >= 0 || n.indexOf('串串') >= 0 || n.indexOf('锅盔') >= 0 || n.indexOf('鬼酥肉') >= 0 || n.indexOf('利美乐') >= 0 || n.indexOf('西餐') >= 0 || n.indexOf('甘煨记') >= 0 || n.indexOf('辣子鸡') >= 0 || n.indexOf('咖啡') >= 0 || n.indexOf('后厨') >= 0 || n.indexOf('牛肉堡') >= 0) return {icon:'<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#777" stroke-width="1.5"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>', bg:bg};
   // 购物类
   if (n.indexOf('拼多多') >= 0 || n.indexOf('小屹q') >= 0 || n.indexOf('超市') >= 0 || n.indexOf('启航') >= 0 || n.indexOf('小卖铺') >= 0 || n.indexOf('商家精选') >= 0 || n.indexOf('踏实') >= 0 || n.indexOf('电子商务') >= 0) return {icon:'<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#777" stroke-width="1.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>', bg:bg};
   // 网购/百货
@@ -4665,7 +4676,7 @@ function toggleBalance(section) {
     } else {
       profitEl.textContent = yesterdayProfit;
       expenseEl.textContent = '¥ 161.41';
-      incomeEl.textContent = '¥ 9,406.56';
+      incomeEl.textContent = '¥ 2.36';
       surplusEl.textContent = '¥ 1,390.50';
     }
   }
