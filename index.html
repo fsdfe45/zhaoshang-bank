@@ -160,7 +160,7 @@ body {
 .tab-bar {
   flex-shrink: 0;
   min-height: var(--tab-h);
-  background: #fff;
+  background: #f0eef2;
   display: flex;
   border-top: 1px solid #eee;
   padding-bottom: var(--safe-bottom);
@@ -1455,9 +1455,10 @@ body {
 .topic-item .ti-btn { background: #e74c3c; color: #fff; padding: 4px 10px; border-radius: 10px; font-size: 10px; display: inline-block; margin-top: 6px; cursor: pointer; }
 
 /* ===== TAB 4: 我的 (Video 5) ===== */
-.my-bg { background: linear-gradient(180deg, #E0F7FA 0%, #F3D6FF 40%, #f5f5f5 100%); }
+.my-bg { background: #f0edf5; }
 
 .my-header {
+  background: #f5f2f8;
   padding: 16px 16px 12px;
 }
 .my-header .my-top {
@@ -1488,7 +1489,7 @@ body {
 .my-stats .ms-label { font-size: 11px; color: #999; margin-top: 2px; }
 
 .my-balance-card {
-  background: linear-gradient(135deg, #E8F0FE 0%, #FDE7FB 100%); border-radius: 12px; margin: 0 16px 12px; padding: 16px;
+  background: #ffffff; border-radius: 12px; margin: 0 16px 12px; padding: 16px;
   cursor: pointer; transition: opacity 0.15s;
 }
 .my-balance-card:active { opacity: 0.7; }
@@ -1521,7 +1522,7 @@ body {
   display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
 }
 .service-rec {
-  background: #f9f9f9; border-radius: 10px; padding: 12px; position: relative;
+  background: #F5F5F5; border-radius: 10px; padding: 12px; position: relative;
 }
 .service-rec .sr-title { font-size: 14px; font-weight: 400; color: #000; margin-bottom: 4px; }
 .service-rec .sr-desc { font-size: 11px; color: #999; margin-bottom: 8px; }
@@ -4261,7 +4262,7 @@ function switchTab(tabName) {
   var statusBar = document.querySelector('.status-bar');
   if (statusBar) {
     if (tabName === 'my') {
-      statusBar.style.background = '#E6D9F5';
+      statusBar.style.background = '#f5f2f8';
     } else if (tabName === 'living') {
       statusBar.style.background = '#fff';
     } else if (tabName === 'wealth') {
