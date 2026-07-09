@@ -496,775 +496,326 @@ body {
 .loan-card .loan-detail { font-size: 12px; color: #999; margin: 6px 0; }
 .loan-card .loan-link { font-size: 12px; color: #4a90d9; cursor: pointer; }
 
-/* ===== Video 1 Homepage ===== */
-.home-bg { background: #f5f5f5; }
+/* ===== 新版首页 ===== */
+.home-bg-v2 { background: #f5f5f5; }
 
-/* Home nav */
-.home-nav {
-  background: #fff;
-  padding: 6px 16px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.home-nav .grid-toggle {
-  font-size: 20px;
-  color: #333;
-  cursor: pointer;
-  flex-shrink: 0;
-}
-.home-nav .hm-search {
-  flex: 1;
-  height: 32px;
-  background: #f5f5f5;
-  border-radius: 16px;
-  display: flex;
-  align-items: center;
-  padding: 0 12px;
-  font-size: 13px;
-  color: #bbb;
-}
-.home-nav .hm-search .search-icon { margin-right: 4px; }
-.home-nav .hm-icons {
-  display: flex;
-  gap: 14px;
-  align-items: center;
-  flex-shrink: 0;
-}
-.home-nav .hm-icons .hm-icon {
-  width: 28px; height: 28px;
-  background: #f0f0f0;
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 14px;
-  position: relative;
-  cursor: pointer;
-}
-.home-nav .hm-icons .hm-icon.msg::after {
-  content: '28';
-  position: absolute;
-  top: -5px; right: -5px;
-  background: #e74c3c; color: #fff;
-  font-size: 10px; width: 16px; height: 16px;
-  border-radius: 8px;
-  display: flex; align-items: center; justify-content: center;
-}
-
-/* Blue hero area */
-.hero-blue {
-  background: linear-gradient(180deg, #3975d3 0%, #5b9ae8 50%, #f5f5f5 100%);
-  padding: 12px 16px 18px;
-}
-.hero-icons-row {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 10px;
-}
-.hero-icons-row .hi-item {
-  text-align: center;
-  cursor: pointer;
-}
-.hero-icons-row .hi-icon {
-  width: 44px; height: 44px;
-  margin: 0 auto 4px;
-  background: rgba(255,255,255,0.25);
-  border-radius: 12px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 22px;
-  color: #fff;
-}
-.hero-icons-row .hi-label {
-  font-size: 12px;
-  color: #fff;
-  font-weight: 400;
-}
-
-/* Wealth banner inside hero */
-.wb-card {
-  background: #fff;
-  border-radius: 14px;
-  padding: 14px 16px;
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 0;
-}
-.wb-card .wb-tag {
-  display: inline-block;
-  background: #fff3e0;
-  color: #ff8c42;
-  font-size: 10px;
-  padding: 2px 8px;
-  border-radius: 4px;
-  margin-bottom: 6px;
-}
-.wb-card .wb-title {
-  font-size: 18px;
-  font-weight: 400;
-  color: #1a3c6e;
-  line-height: 1.3;
-}
-.wb-card .wb-subtitle {
-  font-size: 12px;
-  color: #999;
-  margin: 6px 0 10px;
-}
-.wb-card .wb-subtitle::before { content: '— '; }
-.wb-card .wb-subtitle::after { content: ' —'; }
-.wb-card .wb-btn {
-  display: inline-block;
-  background: #f5a623;
-  color: #fff;
-  padding: 7px 24px;
-  border-radius: 16px;
-  font-size: 13px;
-  font-weight: 400;
-  cursor: pointer;
-}
-.wb-card .wb-graphic {
-  position: absolute;
-  right: 12px;
-  top: 10px;
-  width: 60px; height: 60px;
-  background: linear-gradient(135deg, #3975d3, #5b9ae8);
-  border-radius: 12px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 28px;
-  color: #f5a623;
-  font-weight: 400;
-}
-.wb-card .wb-graphic-sub {
-  position: absolute;
-  right: 16px;
-  top: 56px;
-  font-size: 9px;
-  background: #3975d3;
-  color: #fff;
-  padding: 1px 6px;
-  border-radius: 3px;
-}
-.wb-card .wb-disclaimer {
-  font-size: 8px;
-  color: #ccc;
-  margin-top: 8px;
-}
-
-/* 2x5 service grid */
-.svc-grid-2x5 {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 12px 4px;
-  padding: 14px 16px;
-  background: #fff;
-  margin: 0 16px 8px;
-  border-radius: 12px;
-  text-align: center;
-}
-.svc-grid-2x5 .svc-item {
-  cursor: pointer;
-  position: relative;
-}
-.svc-grid-2x5 .svc-icon {
-  width: 36px; height: 36px;
-  margin: 0 auto 4px;
-  border-radius: 10px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 18px;
-}
-.svc-grid-2x5 .svc-label {
-  font-size: 11px;
-  color: #333;
-}
-.svc-grid-2x5 .svc-badge {
-  position: absolute;
-  top: -4px;
-  right: -4px;
-  background: #e74c3c;
-  color: #fff;
-  font-size: 8px;
-  padding: 1px 5px;
-  border-radius: 4px;
-}
-
-/* === Refined Linear Icon System === */
-
-/* Service grid / icon grid base */
-.svc-icon, .ig-icon {
-  width: 40px; height: 40px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  margin: 0 auto 6px;
-}
-
-/* Hero icons - white linear on blue */
-.hero-blue .hi-icon {
-  font-size: 22px;
-  line-height: 1;
-}
-
-/* AI assistant icon */
-.ai-icon {
-  width: 36px; height: 36px;
-  border-radius: 50%;
-  background: #f0f2f5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  color: #8899aa;
-  flex-shrink: 0;
-}
-
-/* Eye toggle */
-.eye-icon, .mb-header span[style] {
-  font-size: 16px;
-  color: #999;
-  cursor: pointer;
-  user-select: none;
-}
-
-/* Activity card decoration */
-.ac-deco {
-  position: absolute;
-  right: 12px;
-  bottom: 8px;
-  font-size: 42px;
-  color: rgba(0,0,0,0.06);
-  line-height: 1;
-}
-
-/* More services (My tab) */
-.mos-icon {
-  width: 44px; height: 44px;
-  border-radius: 12px;
-  background: #f5f6f8;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  margin: 0 auto 6px;
-  color: #8899aa;
-}
-
-/* Charge list icon */
-.ci-icon {
-  display: inline-block;
-  width: 18px;
-  text-align: center;
-  margin-right: 2px;
-  color: #8899aa;
-}
-
-/* Post actions */
-.post-actions {
-  font-size: 13px;
-  color: #999;
-  margin-top: 8px;
-}
-
-/* Bottom tab icons */
-.tab-icon {
-  font-size: 20px;
-  margin-bottom: 2px;
-  color: #8C8C8C;
-}
-.tab-item.active .tab-icon { color: #333333; }
-
-/* Search icon */
-.search-icon, .comm-search-icon {
-  color: #999;
-  margin-right: 4px;
-  font-size: 14px;
-}
-
-/* Home nav pure gray */
-.grid-toggle {
-  font-size: 20px;
-  color: #666;
-  cursor: pointer;
-}
-.hm-icon {
-  font-size: 20px;
-  color: #666;
-  cursor: pointer;
-}
-.hm-icon.msg {
-  position: relative;
-}
-.hm-icon.msg::after {
-  content: '28';
-  position: absolute;
-  top: -4px;
-  right: -6px;
-  background: #e74c3c;
-  color: #fff;
-  font-size: 9px;
-  width: 14px;
-  height: 14px;
-  border-radius: 7px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Nav buttons (wealth / my) */
-.nav-btns span {
-  font-size: 18px;
-  color: #666;
-  cursor: pointer;
-  margin-left: 12px;
-}
-
-/* Life icons */
-.life-icons {
-  font-size: 18px;
-  color: #666;
-}
-
-/* News ticker bar */
-.news-bar {
-  margin: 0 16px 8px;
-  background: #fff;
-  border-radius: 12px;
-  padding: 10px 14px;
+/* 顶部导航栏 */
+.home-nav-v2 {
+  background: #FFFFFF;
+  padding: 8px 16px;
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 12px;
 }
-.news-bar .news-tag {
-  color: #e74c3c;
-  font-weight: 400;
+.home-nav-v2 .hn-scan {
   flex-shrink: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 }
-.news-bar .news-tag::before { content: '◆ '; }
-.news-bar .news-text {
-  color: #666;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+.home-nav-v2 .hn-search {
+  flex: 1;
+  height: 34px;
+  background: #F5F5F5;
+  border-radius: 17px;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  font-size: 13px;
+  color: #999;
+  border: 1px solid #fff;
+}
+.home-nav-v2 .hn-search-icon { margin-right: 6px; font-size: 15px; color: #999; }
+.home-nav-v2 .hn-service, .home-nav-v2 .hn-msg {
+  flex-shrink: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.home-nav-v2 .hn-msg-badge {
+  position: absolute;
+  top: -5px;
+  right: -7px;
+  background: #e74c3c;
+  color: #fff;
+  font-size: 10px;
+  min-width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  padding: 0 4px;
+  font-weight: 500;
 }
 
-/* Red activity banner */
-.red-banner {
-  margin: 0 16px 8px;
-  background: linear-gradient(160deg, #e8302a 0%, #d42030 30%, #c01836 60%, #a0102e 100%);
-  border-radius: 14px;
+/* Banner暖金区域 */
+.hero-warm {
+  padding: 0 0 0;
+  position: relative;
+  overflow: hidden;
+}
+.hero-warm-bg {
+  background: linear-gradient(180deg, #FDE8C8 0%, #FFF3E0 60%, #F5F5F5 100%);
+  padding: 14px 16px 20px;
+  position: relative;
+}
+.hero-warm-inner {
+  background: linear-gradient(135deg, #FDE0B0 0%, #FFF0D8 50%, #FDE8C0 100%);
+  border-radius: 16px;
+  padding: 18px 20px 18px;
+  position: relative;
+  overflow: hidden;
+  min-height: 145px;
+  box-shadow: 0 2px 8px rgba(200,150,50,0.12);
+}
+.hero-warm .hw-badge {
+  display: inline-block;
+  background: #FF8C00;
+  color: #fff;
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+.hero-warm .hw-title {
+  font-size: 23px;
+  font-weight: 700;
+  color: #C4882B;
+  margin-bottom: 4px;
+  letter-spacing: 2px;
+  text-shadow: 0 1px 2px rgba(180,120,30,0.15);
+}
+.hero-warm .hw-sub {
+  font-size: 13px;
+  color: rgba(255,255,255,0.95);
+  margin-bottom: 14px;
+  font-weight: 500;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+.hero-warm .hw-people {
+  display: flex;
+  gap: 8px;
+  position: absolute;
+  right: 12px;
+  top: 14px;
+}
+.hero-warm .hw-person {
+  text-align: center;
+  width: 50px;
+}
+.hero-warm .hw-person-avatar {
+  width: 36px; height: 36px;
+  background: #E8D5B0;
+  border-radius: 50%;
+  margin: 0 auto 3px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px;
+  color: #8B6914;
+  font-weight: 700;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.hero-warm .hw-person-name {
+  font-size: 9px;
+  color: #8B6914;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.hero-warm .hw-person-title {
+  font-size: 7px;
+  color: #A08050;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+.hero-warm .hw-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #FFB347, #FFA020);
+  color: #fff;
+  padding: 8px 26px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(255,160,32,0.3);
+}
+.hero-warm .hw-wave {
+  position: absolute;
+  bottom: -1px; left: 0; right: 0;
+  height: 20px;
+  z-index: 2;
+}
+.hero-warm .hw-wave::before {
+  content: '';
+  position: absolute;
+  bottom: 0; left: -10%; right: -10%;
+  height: 28px;
+  background: #F5F5F5;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+}
+
+/* 3x4 功能入口网格 */
+.svc-grid-3x4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px 4px;
   padding: 18px 16px;
+  background: #fff;
+  margin: 0 16px 10px;
+  border-radius: 12px;
+  text-align: center;
+}
+.svc-grid-3x4 .svc3-item {
+  cursor: pointer;
+}
+.svc-grid-3x4 .svc3-icon {
+  width: 40px; height: 40px;
+  margin: 0 auto 6px;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px;
+}
+.svc-grid-3x4 .svc3-label {
+  font-size: 13px;
+  color: #333333;
+  font-weight: 400;
+}
+
+/* 广告横幅 */
+.ad-banner-blue {
+  margin: 0 16px 10px;
+  background: linear-gradient(135deg, #1E56A0 0%, #2A7BC1 100%);
+  border-radius: 12px;
+  padding: 16px 18px;
   position: relative;
   overflow: hidden;
   color: #fff;
-  min-height: 100px;
+  min-height: 90px;
   display: flex;
   align-items: center;
 }
-.red-banner .rb-left {
+.ad-banner-blue .ad-left {
   position: relative;
   z-index: 2;
-  flex: 1;
 }
-.red-banner .rb-title {
-  font-size: 19px;
-  font-weight: 400;
-  color: #ffe08a;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.3), 0 0 20px rgba(255,200,80,0.4);
-  line-height: 1.3;
-  margin-bottom: 6px;
-  letter-spacing: 1px;
+.ad-banner-blue .ad-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 4px;
 }
-.red-banner .rb-subtitle {
-  font-size: 14px;
-  color: rgba(255,255,255,0.95);
-  text-shadow: 0 1px 4px rgba(0,0,0,0.2);
+.ad-banner-blue .ad-sub {
+  font-size: 13px;
+  opacity: 0.9;
 }
-.red-banner .rb-right {
-  position: relative;
-  z-index: 2;
-  flex-shrink: 0;
-  width: 90px;
-  height: 80px;
+.ad-banner-blue .ad-decors {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 140px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 6px;
+  gap: 2px;
+}
+.ad-banner-blue .ad-deco-icon {
+  font-size: 22px;
+  opacity: 0.85;
+}
+.ad-banner-blue .ad-badge {
+  position: absolute;
+  right: 14px;
+  bottom: 12px;
+  width: 42px;
+  height: 42px;
+  background: linear-gradient(135deg, #F5A623, #FFB940);
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.red-banner .rb-cat {
-  font-size: 50px;
-  position: absolute;
-  right: 0;
-  top: 5px;
-  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
-}
-.red-banner .rb-gift {
-  font-size: 30px;
-  position: absolute;
-  right: 35px;
-  bottom: 10px;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
-}
-.red-banner .rb-coin {
-  position: absolute;
-  font-size: 10px;
-  color: #ffd700;
-  text-shadow: 0 0 6px rgba(255,215,0,0.8);
-}
-.red-banner .rb-coin.c1 { top: 25px; right: 10px; font-size: 12px; }
-.red-banner .rb-coin.c2 { top: 45px; right: 50px; font-size: 8px; }
-.red-banner .rb-coin.c3 { top: 60px; right: 25px; font-size: 9px; }
-.red-banner .rb-rays {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  z-index: 1;
-  overflow: hidden;
-}
-.red-banner .rb-ray {
-  position: absolute;
-  width: 2px;
-  height: 120px;
-  background: linear-gradient(180deg, rgba(255,255,200,0.5) 0%, rgba(255,255,200,0) 100%);
-  transform: rotate(-15deg);
-  transform-origin: top center;
-}
-.red-banner .rb-sparkles {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  z-index: 1;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  z-index: 2;
+  box-shadow: 0 2px 6px rgba(245,166,35,0.4);
 }
 
-/* Wealth Selection card */
-.ws-main-card {
+/* 财富精选卡片 */
+.wc-pink-card {
+  background: #FFF5F7;
+  border-radius: 8px;
+  margin: 0 16px 10px;
+  padding: 14px 16px;
+}
+.wc-pink-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.wc-pink-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+}
+.wc-pink-more {
+  font-size: 12px;
+  color: #999;
+  cursor: pointer;
+}
+.wc-subcard {
   background: #fff;
-  margin: 0 16px 8px;
-  padding: 16px;
-  border-radius: 12px;
+  border-radius: 8px;
+  padding: 14px 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
 }
-.ws-main-card .wsm-info { flex: 1; }
-.ws-main-card .wsm-title {
+.wc-subcard .wcs-title {
   font-size: 15px;
   font-weight: 400;
   color: #000;
   margin-bottom: 4px;
 }
-.ws-main-card .wsm-tags {
-  display: flex;
-  gap: 6px;
-  align-items: center;
-  margin-bottom: 6px;
-}
-.ws-main-card .wsm-tag {
+.wc-subcard .wcs-tag {
+  display: inline-block;
   font-size: 10px;
-  background: #f5f5f5;
+  background: #eee;
   color: #666;
-  padding: 2px 6px;
-  border-radius: 4px;
+  padding: 1px 6px;
+  border-radius: 3px;
+  margin-left: 6px;
+  vertical-align: middle;
 }
-.ws-main-card .wsm-rate {
+.wc-subcard .wcs-rate {
   font-size: 28px;
-  font-weight: 400;
+  font-weight: 700;
   color: #e74c3c;
 }
-.ws-main-card .wsm-rate-label {
+.wc-subcard .wcs-desc {
   font-size: 11px;
   color: #999;
 }
-.ws-main-card .wsm-features {
+.wc-subcard .wcs-meta {
   display: flex;
   gap: 12px;
   margin-top: 6px;
-  font-size: 10px;
+  font-size: 11px;
   color: #999;
 }
-.ws-main-card .wsm-features span::before { content: '✓ '; color: #888; }
-.ws-main-card .wsm-btn {
-  flex-shrink: 0;
-  background: #fce4ec;
-  color: #e74c3c;
+.wc-subcard .wcs-btn {
+  background: #e74c3c;
+  color: #fff;
   padding: 8px 20px;
-  border-radius: 18px;
-  font-size: 13px;
-  font-weight: 400;
-  cursor: pointer;
-}
-
-/* 3 mini product cards */
-.ws-mini-row {
-  display: flex;
-  gap: 8px;
-  margin: 0 16px 8px;
-}
-.ws-mini-row .wsm-card {
-  flex: 1;
-  background: #fff;
-  border-radius: 10px;
-  padding: 12px 10px;
-  cursor: pointer;
-}
-.ws-mini-row .wsm-card .wsmc-title {
-  font-size: 13px;
-  font-weight: 400;
-  color: #000;
-  margin-bottom: 4px;
-}
-.ws-mini-row .wsm-card .wsmc-sub {
-  font-size: 9px;
-  color: #999;
-  margin-bottom: 6px;
-}
-.ws-mini-row .wsm-card .wsmc-rate {
-  font-size: 20px;
-  font-weight: 400;
-  color: #e74c3c;
-}
-.ws-mini-row .wsm-card .wsmc-desc {
-  font-size: 10px;
-  color: #999;
-  margin-top: 2px;
-}
-.ws-mini-row .wsm-card .wsmc-tag {
-  display: inline-block;
-  font-size: 9px;
-  background: #fce4ec;
-  color: #e74c3c;
-  padding: 2px 8px;
-  border-radius: 4px;
-  margin-top: 8px;
-}
-
-/* AI input */
-.ai-input-row {
-  margin: 0 16px 8px;
-  background: #fff;
-  border-radius: 12px;
-  padding: 12px 16px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.ai-input-row .ai-icon {
-  width: 36px; height: 36px;
-  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
-  border-radius: 10px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 18px;
-  flex-shrink: 0;
-}
-.ai-input-row .ai-placeholder {
-  flex: 1;
-  font-size: 13px;
-  color: #bbb;
-}
-
-/* Lightning loan */
-.loan-full-card {
-  background: #fff;
-  margin: 0 16px 8px;
-  padding: 16px;
-  border-radius: 12px;
-}
-.loan-full-card .lfc-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 6px;
-}
-.loan-full-card .lfc-title {
-  font-size: 17px;
-  font-weight: 400;
-}
-.loan-full-card .lfc-detail {
-  font-size: 12px;
-  color: #999;
-  margin-bottom: 4px;
-}
-.loan-full-card .lfc-amount {
-  font-size: 28px;
-  font-weight: 400;
-  color: #e74c3c;
-  margin-bottom: 8px;
-}
-.loan-full-card .lfc-actions {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.loan-full-card .lfc-link {
-  font-size: 12px;
-  color: #4a90d9;
-  cursor: pointer;
-}
-.loan-full-card .lfc-btn {
-  background: #fff;
-  color: #e74c3c;
-  border: 1px solid #e74c3c;
-  padding: 7px 20px;
   border-radius: 16px;
   font-size: 13px;
-  font-weight: 400;
+  font-weight: 500;
   cursor: pointer;
-}
-
-/* 特色榜单 */
-.rank-row {
-  display: flex;
-  gap: 8px;
-  margin: 0 16px 8px;
-}
-.rank-row .rank-card {
-  flex: 1;
-  background: #fff;
-  border-radius: 10px;
-  padding: 12px 10px;
-  cursor: pointer;
-}
-.rank-row .rank-card .rc-badge {
-  display: inline-block;
-  font-size: 9px;
-  color: #fff;
-  padding: 2px 8px;
-  border-radius: 4px;
-  margin-bottom: 6px;
-}
-.rank-row .rank-card .rc-title {
-  font-size: 14px;
-  font-weight: 400;
-  color: #000;
-  margin-bottom: 6px;
-}
-.rank-row .rank-card .rc-data {
-  font-size: 12px;
-  color: #666;
-}
-.rank-row .rank-card .rc-data b {
-  color: #e74c3c;
-}
-
-/* 生活特惠 - movies */
-.movie-row {
-  display: flex;
-  gap: 8px;
-  margin: 0 16px 8px;
-  overflow-x: auto;
-}
-.movie-card {
-  flex-shrink: 0;
-  width: 110px;
-  border-radius: 10px;
-  overflow: hidden;
-  background: #2a2a3e;
-  cursor: pointer;
-}
-.movie-card .mc-poster {
-  height: 80px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 14px;
-  font-weight: 400;
-  color: #fff;
-  position: relative;
-}
-.movie-card .mc-poster::after {
-  content: '';
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 30px;
-  background: linear-gradient(transparent, rgba(0,0,0,0.7));
-}
-.movie-card .mc-info {
-  padding: 8px;
-}
-.movie-card .mc-name {
-  font-size: 12px;
-  font-weight: 400;
-  color: #fff;
-  margin-bottom: 2px;
-}
-.movie-card .mc-score {
-  font-size: 11px;
-  color: #f5a623;
-}
-
-/* Activity cards */
-.act-row {
-  display: flex;
-  gap: 8px;
-  margin: 0 16px 8px;
-}
-.act-card {
-  flex: 1;
-  background: #fff;
-  border-radius: 10px;
-  padding: 12px;
-  position: relative;
-  cursor: pointer;
-}
-.act-card .ac-title {
-  font-size: 15px;
-  font-weight: 400;
-  color: #000;
-  margin-bottom: 4px;
-}
-.act-card .ac-desc {
-  font-size: 11px;
-  color: #999;
-  margin-bottom: 10px;
-}
-.act-card .ac-btn {
-  display: inline-block;
-  background: #f5f5f5;
-  color: #333;
-  padding: 4px 16px;
-  border-radius: 12px;
-  font-size: 12px;
-  cursor: pointer;
-}
-.act-card .ac-deco {
-  position: absolute;
-  right: 8px;
-  top: 8px;
-  font-size: 28px;
-}
-
-/* 看点情报 */
-.intel-card {
-  margin: 0 16px 8px;
-  background: #fff;
-  border-radius: 12px;
-  padding: 16px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  cursor: pointer;
-}
-.intel-card .ic-tag {
-  width: 44px; height: 44px;
-  background: #e3f2fd;
-  border-radius: 8px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 11px;
-  font-weight: 400;
-  color: #1976d2;
   flex-shrink: 0;
 }
-.intel-card .ic-title {
-  font-size: 15px;
-  font-weight: 400;
-  color: #000;
-}
-.intel-card .ic-desc {
-  font-size: 11px;
-  color: #999;
-  margin-top: 2px;
-}
-.intel-card .ic-arrow {
-  margin-left: auto;
-  color: #ccc;
-  font-size: 16px;
-}
-
 /* ===== TAB 1: 生活 (Video 4) ===== */
 .life-bg { background: #f5f5f5; }
 
@@ -2734,212 +2285,172 @@ body {
 <!-- Status Bar (no dynamic island, no icons) -->
 <div class="status-bar"></div>
 
-<!-- Tab 1: 首页 (Video 1) -->
-<div class="tab-content home-bg active" id="tab-life">
+<!-- Tab 1: 首页 -->
+<div class="tab-content home-bg-v2 active" id="tab-life">
 
-<!-- Home Nav -->
-<div class="home-nav">
-  <span class="grid-toggle"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#777" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8V4h4"/><path d="M21 8V4h-4"/><path d="M3 16v4h4"/><path d="M21 16v4h-4"/><line x1="3" y1="12" x2="21" y2="12"/></svg></span>
-  <div class="hm-search"><span class="search-icon">⌕</span>开户行查询</div>
-  <div class="hm-icons">
-    <span class="hm-icon">↻</span>
-    <span class="hm-icon msg">✉</span>
+<!-- 顶部导航栏 -->
+<div class="home-nav-v2">
+  <span class="hn-scan">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#999" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/>
+      <line x1="10" y1="2" x2="14" y2="2"/><line x1="10" y1="22" x2="14" y2="22"/>
+      <line x1="17" y1="7" x2="22" y2="7"/><line x1="17" y1="17" x2="22" y2="17"/>
+    </svg>
+  </span>
+  <div class="hn-search">
+    <span class="hn-search-icon">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    </span>开户行查询
   </div>
+  <span class="hn-service">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#999" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="9" r="4"/><path d="M20 21c0-4.4-3.6-8-8-8s-8 3.6-8 8"/>
+    </svg>
+  </span>
+  <span class="hn-msg">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#999" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+    </svg>
+    <span class="hn-msg-badge">19</span>
+  </span>
 </div>
 
-<!-- Blue Hero Area -->
-<div class="hero-blue">
-  <div class="hero-icons-row">
-    <div class="hi-item"><div class="hi-icon" style="background:rgba(255,255,255,0.95);color:#3975d3;">◒</div><div class="hi-label">朝朝宝</div></div>
-    <div class="hi-item"><div class="hi-icon" style="background:rgba(255,255,255,0.95);color:#3975d3;">￥</div><div class="hi-label">借钱</div></div>
-    <div class="hi-item"><div class="hi-icon" style="background:rgba(255,255,255,0.95);color:#3975d3;">⇄</div><div class="hi-label">转账</div></div>
-    <div class="hi-item"><div class="hi-icon" style="background:rgba(255,255,255,0.95);color:#3975d3;">◈</div><div class="hi-label">账户总览</div></div>
-  </div>
-  <div class="wb-card">
-    <div class="wb-tag">周五理财</div>
-    <div class="wb-title">17点前买入 周末计收益</div>
-    <div class="wb-subtitle">今天理财也不晚</div>
-    <span class="wb-btn">点击查看</span>
-    <div class="wb-graphic">五</div>
-    <div class="wb-graphic-sub">周末计收益</div>
-    <div class="wb-disclaimer">理财非存款，产品有风险，投资需谨慎</div>
-  </div>
-</div>
-
-<!-- 2x5 Service Grid -->
-<div class="svc-grid-2x5">
-  <div class="svc-item"><div class="svc-icon" style="background:#e8ecf3;color:#7b8a9e;">◆</div><div class="svc-label">申请信用卡</div></div>
-  <div class="svc-item" onclick="openIncomeDetail()"><div class="svc-icon" style="background:#ebf3ee;color:#7ea88a;">▤</div><div class="svc-label">收支明细</div></div>
-  <div class="svc-item"><div class="svc-icon" style="background:#f3efe7;color:#a89878;">⇄</div><div class="svc-label">他行卡转入</div></div>
-  <div class="svc-item"><div class="svc-icon" style="background:#efecf3;color:#9586a8;">⌂</div><div class="svc-label">城市服务</div></div>
-  <div class="svc-item"><div class="svc-icon" style="background:#f2e9ed;color:#a8828e;">✦</div><div class="svc-label">热门活动</div></div>
-  <div class="svc-item"><div class="svc-icon" style="background:#f3f1e6;color:#a89860;">◈</div><div class="svc-label">养老金融</div><div class="svc-badge">焕新</div></div>
-  <div class="svc-item"><div class="svc-icon" style="background:#eaf2f0;color:#7ea098;">▣</div><div class="svc-label">我的账本</div></div>
-  <div class="svc-item"><div class="svc-icon" style="background:#e8ecf3;color:#8598ae;">◇</div><div class="svc-label">理财</div></div>
-  <div class="svc-item"><div class="svc-icon" style="background:#eeebf3;color:#9680a8;">◒</div><div class="svc-label">密码管理</div></div>
-  <div class="svc-item"><div class="svc-icon" style="background:#f0f1f3;color:#888;">⊞</div><div class="svc-label">全部</div></div>
-</div>
-
-<!-- News Ticker -->
-<div class="news-bar">
-  <span class="news-tag">头条</span>
-  <span class="news-text">【热门】从世界杯的佛得角"奇迹"，聊聊那些球场内外...</span>
-</div>
-
-<!-- Red Activity Banner -->
-<div class="red-banner">
-  <div class="rb-rays">
-    <div class="rb-ray" style="top:10%;left:50%;"></div>
-    <div class="rb-ray" style="top:15%;left:55%;"></div>
-    <div class="rb-ray" style="top:12%;left:60%;"></div>
-    <div class="rb-ray" style="top:20%;left:65%;"></div>
-  </div>
-  <div class="rb-left">
-    <div class="rb-title">砸金蛋！赢惊喜好礼</div>
-    <div class="rb-subtitle">月月福利大派送</div>
-  </div>
-  <div class="rb-right">
-    <span class="rb-cat">🐱</span>
-    <span class="rb-gift">🎁</span>
-    <span class="rb-coin c1">●</span>
-    <span class="rb-coin c2">●</span>
-    <span class="rb-coin c3">●</span>
-  </div>
-  <div class="rb-sparkles">
-    <span style="position:absolute;top:15%;left:40%;font-size:8px;color:rgba(255,255,200,0.8);">✦</span>
-    <span style="position:absolute;top:60%;left:45%;font-size:6px;color:rgba(255,255,200,0.6);">✦</span>
-    <span style="position:absolute;top:30%;left:35%;font-size:7px;color:rgba(255,255,200,0.7);">✦</span>
-  </div>
-</div>
-
-<!-- 财富精选 -->
-<div class="section-header"><span class="sh-title">财富精选</span><span class="sh-more">更多 &gt;</span></div>
-
-<div class="ws-main-card">
-  <div class="wsm-info">
-    <div class="wsm-title">活钱理财 | 历史天天正收益</div>
-    <div class="wsm-tags"><span class="wsm-tag">代销</span></div>
-    <div class="wsm-rate">2.80%</div>
-    <div class="wsm-rate-label">7日年化</div>
-    <div class="wsm-features"><span>R1低风险</span><span>赎回T+1到账</span></div>
-  </div>
-  <span class="wsm-btn">去看看</span>
-</div>
-
-<div class="ws-mini-row">
-  <div class="wsm-card">
-    <div class="wsmc-title">持有14天 <span style="font-size:9px;color:#999;">代销</span></div>
-    <div class="wsmc-rate">3.36%</div>
-    <div class="wsmc-desc">成立以来年化</div>
-    <div class="wsmc-tag">稳健低波</div>
-  </div>
-  <div class="wsm-card">
-    <div class="wsmc-title">月月享</div>
-    <div class="wsmc-rate">3.61%</div>
-    <div class="wsmc-desc">近1年涨跌幅</div>
-    <div class="wsmc-tag">中短债策略</div>
-  </div>
-  <div class="wsm-card">
-    <div class="wsmc-title">保险</div>
-    <div class="wsmc-sub">R1低风险</div>
-    <div class="wsmc-rate">3.3%</div>
-    <div class="wsmc-desc">上年结算利率</div>
-    <div class="wsmc-tag">有保证利率</div>
-  </div>
-</div>
-
-<!-- AI Input -->
-<div class="ai-input-row">
-  <div class="ai-icon">◎</div>
-  <span class="ai-placeholder">理财产品这么多，哪款适合我？</span>
-</div>
-
-<!-- 借钱服务 -->
-<div class="section-header"><span class="sh-title">借钱服务</span><span class="sh-more">更多 &gt;</span></div>
-<div class="loan-full-card">
-  <div class="lfc-header">
-    <span class="lfc-title">闪电贷</span>
-    <span class="lfc-btn">去借钱</span>
-  </div>
-  <div class="lfc-detail">可借额度 | 年利率(单利) 6.51%</div>
-  <div class="lfc-amount">¥138,000.00</div>
-  <div class="lfc-actions">
-    <span class="lfc-link">戳我立即提额 &gt;</span>
-  </div>
-</div>
-
-<!-- 特色榜单 -->
-<div class="section-header"><span class="sh-title">特色榜单</span><span class="sh-more">更多 &gt;</span></div>
-<div class="rank-row">
-  <div class="rank-card">
-    <div class="rc-badge" style="background:#f5a623;">优中选优</div>
-    <div class="rc-title">3322选基</div>
-    <div class="rc-data">近1年涨跌幅高达<b>370.80%</b></div>
-  </div>
-  <div class="rank-card">
-    <div class="rc-badge" style="background:#ff8c42;">超越基准</div>
-    <div class="rc-title">超额收益榜</div>
-    <div class="rc-data">超额收益高达<b>402.41%</b></div>
-  </div>
-  <div class="rank-card">
-    <div class="rc-badge" style="background:#66bb6a;">机构重仓</div>
-    <div class="rc-title">机构青睐榜</div>
-    <div class="rc-data">多达<b>76</b>只FOF基金持有</div>
-  </div>
-</div>
-
-<!-- 生活特惠 -->
-<div class="section-header"><span class="sh-title">生活特惠</span><span class="sh-more">更多 &gt;</span></div>
-<div style="margin:0 16px 6px;font-size:14px;font-weight:400;color:#000;">热映大片</div>
-<div class="movie-row">
-  <div class="movie-card">
-    <div class="mc-poster" style="background:linear-gradient(135deg,#1a5276,#2e86c1);">四渡</div>
-    <div class="mc-info">
-      <div class="mc-name">四渡</div>
-      <div class="mc-score">暂无评分</div>
+<!-- Banner区域 -->
+<div class="hero-warm">
+  <div class="hero-warm-bg">
+    <div class="hero-warm-inner">
+      <div class="hw-badge">一举夺&#8220;葵&#8221;</div>
+      <div class="hw-title">留学大讲堂</div>
+      <div class="hw-sub">对话世界顶尖名校</div>
+      <span class="hw-btn">点击参与</span>
+      <div class="hw-people">
+        <div class="hw-person">
+          <div class="hw-person-avatar">王</div>
+          <div class="hw-person-name">王颐</div>
+          <div class="hw-person-title">中欧国际工商学院</div>
+          <div class="hw-person-title">管理学院教授</div>
+        </div>
+        <div class="hw-person">
+          <div class="hw-person-avatar">邓</div>
+          <div class="hw-person-name">邓宁</div>
+          <div class="hw-person-title">伦敦商学院</div>
+          <div class="hw-person-title">金融系教授</div>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="movie-card">
-    <div class="mc-poster" style="background:linear-gradient(135deg,#e67e22,#f39c12);">玩具总动员5</div>
-    <div class="mc-info">
-      <div class="mc-name">玩具总动员5</div>
-      <div class="mc-score">9.2分</div>
-    </div>
-  </div>
-  <div class="movie-card">
-    <div class="mc-poster" style="background:linear-gradient(135deg,#7d3c98,#a569bd);">抓特务</div>
-    <div class="mc-info">
-      <div class="mc-name">抓特务</div>
-      <div class="mc-score">9.0分</div>
-    </div>
+    <div class="hw-wave"></div>
   </div>
 </div>
 
-<div style="margin:0 16px 4px;font-size:14px;font-weight:400;color:#000;">活动中心</div>
-<div class="act-row">
-  <div class="act-card" style="background:#fce4ec;">
-    <div class="ac-title">发工资享福利</div>
-    <div class="ac-desc">工资卡客户专享</div>
-    <span class="ac-btn">抽取</span>
-    <div class="ac-deco">◆</div>
+<!-- 功能入口网格区 3x4 -->
+<div class="svc-grid-3x4">
+  <div class="svc3-item">
+    <div class="svc3-icon" style="background:#E8F0FE;color:#4A90D9;">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#4A90D9" stroke-width="1.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><line x1="4.93" y1="4.93" x2="9.17" y2="9.17"/><line x1="14.83" y1="14.83" x2="19.07" y2="19.07"/><line x1="14.83" y1="9.17" x2="19.07" y2="4.93"/><line x1="4.93" y1="19.07" x2="9.17" y2="14.83"/></svg>
+    </div>
+    <div class="svc3-label">朝朝宝</div>
   </div>
-  <div class="act-card" style="background:#e8f5e9;">
-    <div class="ac-title">种下一棵招财树</div>
-    <div class="ac-desc">新客专享 财富惊喜</div>
-    <span class="ac-btn">去解锁</span>
-    <div class="ac-deco">◆</div>
+  <div class="svc3-item">
+    <div class="svc3-icon" style="background:#FFF3E0;color:#FF9800;">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#FF9800" stroke-width="1.5" stroke-linecap="round"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+    </div>
+    <div class="svc3-label">借钱</div>
+  </div>
+  <div class="svc3-item">
+    <div class="svc3-icon" style="background:#E8F5E9;color:#4CAF50;">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#4CAF50" stroke-width="1.5" stroke-linecap="round"><polyline points="17 1 21 5 17 9"/><line x1="3" y1="5" x2="21" y2="5"/><polyline points="7 23 3 19 7 15"/><line x1="21" y1="19" x2="3" y2="19"/></svg>
+    </div>
+    <div class="svc3-label">转账</div>
+  </div>
+  <div class="svc3-item">
+    <div class="svc3-icon" style="background:#F3E5F5;color:#9C27B0;">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#9C27B0" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+    </div>
+    <div class="svc3-label">账户总览</div>
+  </div>
+  <div class="svc3-item">
+    <div class="svc3-icon" style="background:#E8EAF6;color:#3F51B5;">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#3F51B5" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+    </div>
+    <div class="svc3-label">申请信用卡</div>
+  </div>
+  <div class="svc3-item">
+    <div class="svc3-icon" style="background:#FFF8E1;color:#FFA000;">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#FFA000" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+    </div>
+    <div class="svc3-label">收支明细</div>
+  </div>
+  <div class="svc3-item">
+    <div class="svc3-icon" style="background:#E0F2F1;color:#00897B;">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#00897B" stroke-width="1.5" stroke-linecap="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+    </div>
+    <div class="svc3-label">他行卡转入</div>
+  </div>
+  <div class="svc3-item">
+    <div class="svc3-icon" style="background:#FCE4EC;color:#E91E63;">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#E91E63" stroke-width="1.5" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    </div>
+    <div class="svc3-label">城市服务</div>
+  </div>
+  <div class="svc3-item">
+    <div class="svc3-icon" style="background:#EDE7F6;color:#5E35B1;">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#5E35B1" stroke-width="1.5" stroke-linecap="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+    </div>
+    <div class="svc3-label">养老金融</div>
+  </div>
+  <div class="svc3-item">
+    <div class="svc3-icon" style="background:#FBE9E7;color:#D84315;">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#D84315" stroke-width="1.5" stroke-linecap="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+    </div>
+    <div class="svc3-label">理财</div>
+  </div>
+  <div class="svc3-item">
+    <div class="svc3-icon" style="background:#E0F7FA;color:#00838F;">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#00838F" stroke-width="1.5" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+    </div>
+    <div class="svc3-label">网点</div>
+  </div>
+  <div class="svc3-item">
+    <div class="svc3-icon" style="background:#F3E5F5;color:#7B1FA2;">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#7B1FA2" stroke-width="1.5" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+    </div>
+    <div class="svc3-label">我的账本</div>
   </div>
 </div>
 
-<!-- 看点情报 -->
-<div class="section-header"><span class="sh-title">看点情报</span><span style="font-size:11px;color:#999;">洞见趋势 投资有招</span></div>
-<div class="intel-card">
-  <div class="ic-tag">网点故事</div>
-  <div>
-    <div class="ic-title">网点故事 &gt;</div>
-    <div class="ic-desc">记录发生在网点的真实故事</div>
+<!-- 广告横幅卡片 -->
+<div class="ad-banner-blue">
+  <div class="ad-left">
+    <div class="ad-title">月月领专属好礼</div>
+    <div class="ad-sub">发工资享福利</div>
   </div>
-  <span class="ic-arrow">&gt;</span>
+  <div class="ad-decors">
+    <span class="ad-deco-icon" style="font-size:36px;">&#x1F638;</span>
+    <span class="ad-deco-icon" style="font-size:20px;margin-top:10px;">&#x1FA99;</span>
+    <span class="ad-deco-icon" style="font-size:22px;">&#x1F4C5;</span>
+    <span class="ad-deco-icon" style="font-size:18px;">&#x1F389;</span>
+  </div>
+  <div class="ad-badge">天天</div>
+</div>
+
+<!-- 财富精选卡片 -->
+<div class="wc-pink-card">
+  <div class="wc-pink-header">
+    <span class="wc-pink-title">财富精选</span>
+    <span class="wc-pink-more">更多</span>
+  </div>
+  <div class="wc-subcard">
+    <div class="wcs-info">
+      <div class="wcs-title">活钱理财 <span style="color:#999;font-size:11px;">|</span> 历史天天正收益 <span class="wcs-tag">代销</span></div>
+      <div class="wcs-rate">2.80%</div>
+      <div class="wcs-desc">7日年化</div>
+      <div class="wcs-meta">
+        <span>R1低风险</span>
+        <span>赎回T+1到账</span>
+      </div>
+    </div>
+    <span class="wcs-btn">去看看</span>
+  </div>
 </div>
 
 <div style="height:20px;"></div>
@@ -3717,24 +3228,24 @@ body {
 <!-- Bottom Tab Bar -->
 <div class="tab-bar">
   <div class="tab-item active" onclick="switchTab('life')" data-tab="life">
-    <div class="tab-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#8C8C8C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+    <div class="tab-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
     <div>首页</div>
   </div>
   <div class="tab-item" onclick="switchTab('comm')" data-tab="comm">
-    <div class="tab-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#8C8C8C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+    <div class="tab-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
     <div>社区</div>
   </div>
   <div class="tab-item" onclick="switchTab('wealth')" data-tab="wealth">
-    <div class="tab-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#8C8C8C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="4"/><polyline points="6 10 12 4 18 10"/></svg></div>
+    <div class="tab-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 12 5 6 9 10 13 4 17 8 21 2"/><polyline points="21 2 21 12"/></svg></div>
     <div>财富</div>
     <div class="tab-badge">周五理财</div>
   </div>
   <div class="tab-item" onclick="switchTab('living')" data-tab="living">
-    <div class="tab-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#8C8C8C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+    <div class="tab-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
     <div>生活</div>
   </div>
   <div class="tab-item" onclick="switchTab('my')" data-tab="my">
-    <div class="tab-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#8C8C8C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 0 0-16 0"/></svg></div>
+    <div class="tab-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 0 0-16 0"/></svg></div>
     <div>我的</div>
   </div>
 </div>
