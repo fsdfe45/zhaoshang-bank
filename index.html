@@ -7,7 +7,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="招商银行">
 <meta name="theme-color" content="#f2f2f2">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'><rect width='180' height='180' rx='36' fill='%23d32f2f'/><text x='90' y='110' font-family='Arial' font-size='80' font-weight='bold' text-anchor='middle' fill='white'>招</text></svg>">
 <link rel="manifest" href="manifest.json">
 <title>银行App</title>
 <style>
@@ -3109,7 +3109,7 @@ body {
   <div class="bal-row">
     <div class="bal-item">
       <div class="bal-label">总净值</div>
-      <div class="bal-value" id="wealth-total">300,184.34</div>
+      <div class="bal-value" id="wealth-total">180,162.92</div>
     </div>
     <div class="bal-item" style="text-align:right;">
       <div class="bal-label">昨日收益</div>
@@ -3621,7 +3621,7 @@ body {
   <div class="mb-row">
     <div class="mb-item">
       <div class="mb-label">总资产</div>
-      <div class="mb-value" id="my-total">300,250.92</div>
+      <div class="mb-value" id="my-total">180,162.92</div>
     </div>
     <div class="mb-item">
       <div class="mb-label">昨日收益</div>
@@ -4367,12 +4367,15 @@ var incomeData = {
     {date:"7.02",name:"后厨小灶",time:"11:57",amt:"-14.00",balance:"300,212.92",tag:""},
     {date:"7.02",name:"后厨小灶",time:"11:54",amt:"-12.00",balance:"300,226.92",tag:""},
     {date:"7.01",name:"后厨小灶",time:"11:59",amt:"-12.00",balance:"300,238.92",tag:""}
+  ]},
+  "11月": { income: "0.00", expense: "120000.00", records: [
+    {date:"11.12",name:"魏锐",time:"10:30",amt:"-120,000.00",balance:"180,162.92",tag:"转出",card:"储蓄卡7186"}
   ]}
 };
 
 // Dynamic balance: read latest balance from 6月 income records
 function getLatestBalance() {
-  var months = ['7月','6月','5月','4月','3月','2月','1月'];
+  var months = ['11月','7月','6月','5月','4月','3月','2月','1月'];
   for (var i = 0; i < months.length; i++) {
     var m = incomeData[months[i]];
     if (m && m.records && m.records.length > 0) {
@@ -4608,6 +4611,8 @@ function switchIncomeMonth(month) {
       tagHtml = '<span class="io-tag refund">退</span>';
     } else if (r.tag === '转入') {
       tagHtml = '<span class="io-tag transfer">转入</span>';
+    } else if (r.tag === '转出') {
+      tagHtml = '<span class="io-tag transfer">转出</span>';
     }
     
     html += '<div class="io-rec">';
@@ -4621,7 +4626,7 @@ function switchIncomeMonth(month) {
       html += '<span class="io-int-note">结息：5.00 扣税：0.00</span>';
     }
     html += '</div>';
-    html += '<div class="io-rec-sub">储蓄卡5802 ' + r.time + '</div>';
+    html += '<div class="io-rec-sub">' + (r.card || '储蓄卡5802') + ' ' + r.time + '</div>';
     html += '</div>';
     html += '<div class="io-rec-right">';
     html += '<div class="io-rec-amt ' + amtClass + '">' + amtDisplay + '</div>';
